@@ -1,5 +1,5 @@
-import Box from "./components/Box";
-import EmptyBox from "./components/EmptyBox";
+import Box from "./components/Box/Box";
+import EmptyBox from "./components/EmptyBox/EmptyBox";
 
 function App() {
   return (
