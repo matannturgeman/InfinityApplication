@@ -6,7 +6,7 @@ const Box = () => {
         <div
             className="empty-box"
         >
-            <h1>Box</h1>
+            <h1>Example Text</h1>
         </div>
     );
 };
