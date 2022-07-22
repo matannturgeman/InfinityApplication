@@ -14,7 +14,6 @@ const Box = () => {
     const [ref, inView] = useInView();
 
     useEffect(() => {
-        console.log({ inView })
         if (inView) {
             control.start("visible");
         } else {
@@ -30,7 +29,7 @@ const Box = () => {
             animate={control}
             className="box"
         >
-            <h1>Box</h1>
+            <h1>Example Text</h1>
         </motion.div>
     );
 };
