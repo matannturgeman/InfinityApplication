@@ -10,10 +10,6 @@ function App() {
           <h1>Example Text</h1>
         </EmptyBox>
 
-        <EmptyBox>
-          <h1>Example Text</h1>
-        </EmptyBox>
-
         <Box>
           <h1>Example Text</h1>
         </Box>
