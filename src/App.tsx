@@ -8,6 +8,7 @@ function App() {
       <MainLayout>
         <EmptyBox>
           <h1>Example Text</h1>
+          
         </EmptyBox>
 
         <Box>
