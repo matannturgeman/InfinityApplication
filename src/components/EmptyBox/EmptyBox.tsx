@@ -1,12 +1,12 @@
 import * as React from "react";
 import "./EmptyBox.css";
 
-const Box = () => {
+const Box = ({ children }) => {
     return (
         <div
             className="empty-box"
         >
-            <h1>Example Text</h1>
+            {children}
         </div>
     );
 };

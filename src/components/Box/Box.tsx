@@ -9,7 +9,7 @@ const boxVariant = {
     hidden: { opacity: 0 },
 }
 
-const Box = () => {
+const Box = ({ children }) => {
     const control = useAnimation();
     const [ref, inView] = useInView();
 
@@ -29,7 +29,7 @@ const Box = () => {
             animate={control}
             className="box"
         >
-            <h1>Example Text</h1>
+            {children}
         </motion.div>
     );
 };
