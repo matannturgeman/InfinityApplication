@@ -31,4 +31,10 @@ code {
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.App > div > div {
+  background-color: transparent !important;
 }

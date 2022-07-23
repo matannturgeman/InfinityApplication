@@ -4,8 +4,8 @@ import MainLayout from "./components/MainLayout/MainLayout";
 
 function App() {
   return (
-    <MainLayout>
-      <div className="App">
+    <div className="App">
+      <MainLayout>
         <EmptyBox>
           <h1>Example Text</h1>
         </EmptyBox>
@@ -17,8 +17,8 @@ function App() {
         <Box>
           <h1>Example Text</h1>
         </Box>
-      </div>
-    </MainLayout>
+      </MainLayout>
+    </div>
   );
 }
 

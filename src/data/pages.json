@@ -1,0 +1,26 @@
+[
+  {
+    "label": "עמוד הבית",
+    "value": "home"
+  },
+  {
+    "label": "אודות",
+    "value": "about-us"
+  },
+  {
+    "label": "גלריה",
+    "value": "gallery"
+  },
+  {
+    "label": "נגישות",
+    "value": "accessibility"
+  },
+  {
+    "label": "צור קשר",
+    "value": "contect-us"
+  },
+  {
+    "label": "הזמן",
+    "value": "order"
+  }
+]
