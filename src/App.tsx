@@ -4,7 +4,7 @@ import MainLayout from "./components/MainLayout/MainLayout";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <MainLayout>
         <EmptyBox>
           <h1>Example Text</h1>

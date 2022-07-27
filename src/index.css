@@ -25,7 +25,7 @@ code {
   overflow-x: hidden;
 }
 
-.App {
+.app {
   background-image: url("assets/images/logo-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -36,6 +36,6 @@ code {
   height: 100vh;
 }
 
-.App > div > div {
+.app > div > div {
   background-color: transparent !important;
 }
