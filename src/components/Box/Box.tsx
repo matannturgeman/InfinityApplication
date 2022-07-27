@@ -2,7 +2,7 @@ import * as React from "react";
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import "./Box.css";
+import "./Box.scss";
 
 const boxVariant = {
     visible: { opacity: 1, transition: { duration: 0.9 } },
