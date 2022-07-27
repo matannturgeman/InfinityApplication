@@ -1,27 +1,12 @@
-import Box from "./components/Box/Box";
-import EmptyBox from "./components/EmptyBox/EmptyBox";
+import * as React from "react";
 import MainLayout from "./components/MainLayout/MainLayout";
+import Views from "./views/Views"
 
 function App() {
   return (
     <div className="app">
       <MainLayout>
-        <EmptyBox>
-          <h1>Example Text</h1>
-        </EmptyBox>
-
-        <EmptyBox>
-          <h1>Example Text</h1>
-        </EmptyBox>
-        <EmptyBox>
-          <h1>Example Text</h1>
-        </EmptyBox>
-        <EmptyBox>
-          <h1>Example Text</h1>
-        </EmptyBox>
-        <Box>
-          <h1>Example Text</h1>
-        </Box>
+        <Views />
       </MainLayout>
     </div>
   );
