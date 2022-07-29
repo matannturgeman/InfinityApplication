@@ -1,26 +1,101 @@
 [
   {
     "label": "עמוד הבית",
-    "value": "home"
+    "value": "home",
+    "data": {
+      "text": ""
+    }
   },
   {
     "label": "אודות",
-    "value": "about-us"
+    "value": "about-us",
+    "data": {
+      "text": "example text",
+      "phone": {
+        "owner": "052-4472192",
+        "partner": "052-8671310"
+      },
+      "address": {
+        "text": "efal 20, petah tikva",
+        "lat": 32.09617,
+        "long": 34.848433
+      },
+      "activity": {
+        "open": "07:00",
+        "close": "17:00",
+        "froDay": "sunday",
+        "toDay": "thursday"
+      },
+      "email": "infinityironwork@gmail.com",
+      "form": [
+        { "name": "fullName", "label": "שם מלא", "isReuired": true },
+        { "name": "phone", "label": "טלפון", "isReuired": true },
+        { "name": "email", "label": "אימייל", "isReuired": true },
+        { "name": "message", "label": "הודעה", "isReuired": false }
+      ]
+    }
   },
   {
     "label": "גלריה",
-    "value": "gallery"
-  },
-  {
-    "label": "נגישות",
-    "value": "accessibility"
+    "value": "gallery",
+    "subjects": [
+      {
+        "name": "projects",
+        "label": "פרוייקטים",
+        "images": [""]
+      },
+      {
+        "name": "banisters",
+        "label": "מעקות",
+        "images": [""]
+      },
+      {
+        "name": "gates",
+        "label": "שערים",
+        "images": [""]
+      },
+      {
+        "name": "constructions",
+        "label": "קונסטרוקציות",
+        "images": [""]
+      },
+      {
+        "name": "grates",
+        "label": "סורגים",
+        "images": [""]
+      }
+    ]
   },
   {
     "label": "צור קשר",
-    "value": "contect-us"
-  },
-  {
-    "label": "הזמן",
-    "value": "order"
+    "value": "contect-us",
+    "data": {
+      "social": {
+        "instegram": "https://www.instagram.com/infinityironwork/",
+        "facebook": "https://m.facebook.com/InfinityMetals2017/"
+      },
+      "phone": {
+        "owner": "052-4472192",
+        "partner": "052-8671310"
+      },
+      "address": {
+        "text": "efal 20, petah tikva",
+        "lat": 32.09617,
+        "long": 34.848433
+      },
+      "activity": {
+        "open": "07:00",
+        "close": "17:00",
+        "froDay": "sunday",
+        "toDay": "thursday"
+      },
+      "email": "infinityironwork@gmail.com",
+      "form": [
+        { "name": "fullName", "label": "שם מלא", "isReuired": true },
+        { "name": "phone", "label": "טלפון", "isReuired": true },
+        { "name": "email", "label": "אימייל", "isReuired": true },
+        { "name": "message", "label": "הודעה", "isReuired": false }
+      ]
+    }
   }
 ]
