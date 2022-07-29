@@ -9,7 +9,7 @@ const boxVariant = {
     hidden: { opacity: 0 },
 }
 
-const Box = ({ children }) => {
+const Box = ({ children, ...restProps }) => {
     const control = useAnimation();
     const [ref, inView] = useInView();
 
@@ -28,6 +28,7 @@ const Box = ({ children }) => {
             initial="hidden"
             animate={control}
             className="box"
+            {...restProps}
         >
             {children}
         </motion.div>

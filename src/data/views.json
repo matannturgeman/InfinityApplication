@@ -4,7 +4,8 @@
     "value": "home",
     "data": {
       "text": ""
-    }
+    },
+    "isEmpty": true
   },
   {
     "label": "אודות",
@@ -33,38 +34,42 @@
         { "name": "email", "label": "אימייל", "isReuired": true },
         { "name": "message", "label": "הודעה", "isReuired": false }
       ]
-    }
+    },
+    "isEmpty": true
   },
   {
     "label": "גלריה",
     "value": "gallery",
-    "subjects": [
-      {
-        "name": "projects",
-        "label": "פרוייקטים",
-        "images": [""]
-      },
-      {
-        "name": "banisters",
-        "label": "מעקות",
-        "images": [""]
-      },
-      {
-        "name": "gates",
-        "label": "שערים",
-        "images": [""]
-      },
-      {
-        "name": "constructions",
-        "label": "קונסטרוקציות",
-        "images": [""]
-      },
-      {
-        "name": "grates",
-        "label": "סורגים",
-        "images": [""]
-      }
-    ]
+    "data": {
+      "subjects": [
+        {
+          "name": "projects",
+          "label": "פרוייקטים",
+          "images": [""]
+        },
+        {
+          "name": "banisters",
+          "label": "מעקות",
+          "images": [""]
+        },
+        {
+          "name": "gates",
+          "label": "שערים",
+          "images": [""]
+        },
+        {
+          "name": "constructions",
+          "label": "קונסטרוקציות",
+          "images": [""]
+        },
+        {
+          "name": "grates",
+          "label": "סורגים",
+          "images": [""]
+        }
+      ]
+    },
+    "isEmpty": true
   },
   {
     "label": "צור קשר",
@@ -96,6 +101,7 @@
         { "name": "email", "label": "אימייל", "isReuired": true },
         { "name": "message", "label": "הודעה", "isReuired": false }
       ]
-    }
+    },
+    "isEmpty": false
   }
 ]
