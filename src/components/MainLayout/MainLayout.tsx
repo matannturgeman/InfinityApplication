@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./NavBar/NavBar";
 import ScrollBar from "./ScrollBar/ScrollBar";
-import pages from "../../data/pages.json";
+import pages from "../../data/views.json";
 
 const MainLayout = (props) => {
   const { children } = props;
