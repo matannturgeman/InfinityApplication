@@ -1,7 +1,7 @@
 import * as React from "react";
 import Box from "../components/Box/Box";
 import EmptyBox from "../components/EmptyBox/EmptyBox";
-import view from "../data/views.json";
+import * as views from "../data/views.json";
 
 function Views() {
   const renderView = (view) => {
@@ -15,7 +15,7 @@ function Views() {
     );
   };
 
-  return <>{view.map(renderView)}</>;
+  return <>{Array.from(views).map(renderView)}</>;
 }
 
 export default Views;

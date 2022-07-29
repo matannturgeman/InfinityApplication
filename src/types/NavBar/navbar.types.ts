@@ -1,8 +1,5 @@
-export type Page = {
-  label: string;
-  value: string;
-};
+import { View } from "../Views/views.types";
 
 export type NavBarProps = {
-  pages: Page[];
+  views: View[];
 };

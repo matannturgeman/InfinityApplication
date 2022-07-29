@@ -1,34 +1,20 @@
 import * as React from "react";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import MenuItem from "@mui/material/MenuItem";
 import ScrollTo from "react-scroll-into-view";
-import {
-  transformOriginType,
-  anchorOriginType,
-} from "../../../types/NavBar/navbar.intefaces";
-import { Page, NavBarProps } from "../../../types/NavBar/navbar.types";
+import { NavBarProps } from "../../../types/NavBar/navbar.types";
+import { View } from "../../../types/Views/views.types";
+import TemporaryDrawer from "../Drawer/Drawer";
 
-const NavBar = ({ pages }: NavBarProps) => {
+const NavBar = ({ views }: NavBarProps) => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
-
-  const { current: anchorOrigin }: anchorOriginType = useRef({
-    vertical: "bottom",
-    horizontal: "left",
-  });
-
-  const { current: transformOrigin }: transformOriginType = useRef({
-    vertical: "top",
-    horizontal: "left",
-  });
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>): void => {
     setAnchorElNav(event.currentTarget);
@@ -44,40 +30,12 @@ const NavBar = ({ pages }: NavBarProps) => {
     </Typography>
   );
 
-  const renderMenu = (): JSX.Element => (
-    <Menu
-      id="menu-appbar"
-      anchorEl={anchorElNav}
-      anchorOrigin={anchorOrigin}
-      keepMounted
-      transformOrigin={transformOrigin}
-      open={Boolean(anchorElNav)}
-      onClose={handleCloseNavMenu}
-      sx={styles.Menu}
-    >
-      {pages.map(
-        ({ label, value }: Page): JSX.Element => (
-          <ScrollTo
-            key={value}
-            onClick={handleCloseNavMenu}
-            selector={`#page-${value}`}
-          >
-            <Typography textAlign="center">{label}</Typography>
-          </ScrollTo>
-        )
-      )}
-    </Menu>
-  );
-
   const renderNavMenu = (): JSX.Element => (
     <Box sx={styles.BoxButtons}>
-      {pages.map(
-        ({ label, value }: Page): JSX.Element => (
+      {views.map(
+        ({ label, value }: View): JSX.Element => (
           <ScrollTo key={value} selector={`#page-${value}`}>
-            <Button
-              onClick={handleCloseNavMenu}
-              sx={styles.Button}
-            >
+            <Button onClick={handleCloseNavMenu} sx={styles.Button}>
               {label}
             </Button>
           </ScrollTo>
@@ -104,7 +62,7 @@ const NavBar = ({ pages }: NavBarProps) => {
               <MenuIcon />
             </IconButton>
 
-            {renderMenu()}
+            <TemporaryDrawer open={Boolean(anchorElNav)} onClose={handleCloseNavMenu} views={views} />
           </Box>
 
           {renderNavMenu()}
