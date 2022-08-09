@@ -3,9 +3,9 @@ import "./EmptyBox.scss";
 
 const Box = ({ children, ...restProps }) => {
   return (
-    <div className="empty-box" {...restProps}>
+    <section className="empty-box" {...restProps}>
       {children}
-    </div>
+    </section>
   );
 };
 
