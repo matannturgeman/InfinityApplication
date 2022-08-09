@@ -24,7 +24,7 @@
       "activity": {
         "open": "07:00",
         "close": "17:00",
-        "froDay": "sunday",
+        "fromDay": "sunday",
         "toDay": "thursday"
       },
       "email": "infinityironwork@gmail.com",
@@ -76,7 +76,7 @@
     "value": "contect-us",
     "data": {
       "social": {
-        "instegram": "https://www.instagram.com/infinityironwork/",
+        "instagram": "https://www.instagram.com/infinityironwork/",
         "facebook": "https://m.facebook.com/InfinityMetals2017/"
       },
       "phone": {
