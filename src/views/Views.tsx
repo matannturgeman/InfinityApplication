@@ -9,7 +9,7 @@ import { VIEWS } from "../constants/views.constants";
 
 
 function Views() {
-  const renderView = (view) => {
+  const renderView = (view: View) => {
     const { value, data } = view;
 
     switch (value) {

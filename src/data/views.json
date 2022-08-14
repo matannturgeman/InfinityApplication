@@ -29,10 +29,26 @@
       },
       "email": "infinityironwork@gmail.com",
       "form": [
-        { "name": "fullName", "label": "שם מלא", "isReuired": true },
-        { "name": "phone", "label": "טלפון", "isReuired": true },
-        { "name": "email", "label": "אימייל", "isReuired": true },
-        { "name": "message", "label": "הודעה", "isReuired": false }
+        {
+          "name": "fullName",
+          "label": "שם מלא",
+          "isReuired": true
+        },
+        {
+          "name": "phone",
+          "label": "טלפון",
+          "isReuired": true
+        },
+        {
+          "name": "email",
+          "label": "אימייל",
+          "isReuired": true
+        },
+        {
+          "name": "message",
+          "label": "הודעה",
+          "isReuired": false
+        }
       ]
     },
     "isEmpty": true
@@ -43,29 +59,44 @@
     "data": {
       "subjects": [
         {
+          "id": 0,
           "name": "projects",
           "label": "פרוייקטים",
-          "images": [""]
+          "images": [
+            ""
+          ]
         },
         {
+          "id": 1,
           "name": "banisters",
           "label": "מעקות",
-          "images": [""]
+          "images": [
+            ""
+          ]
         },
         {
+          "id": 2,
           "name": "gates",
           "label": "שערים",
-          "images": [""]
+          "images": [
+            ""
+          ]
         },
         {
+          "id": 3,
           "name": "constructions",
           "label": "קונסטרוקציות",
-          "images": [""]
+          "images": [
+            ""
+          ]
         },
         {
+          "id": 4,
           "name": "grates",
           "label": "סורגים",
-          "images": [""]
+          "images": [
+            ""
+          ]
         }
       ]
     },
@@ -96,10 +127,26 @@
       },
       "email": "infinityironwork@gmail.com",
       "form": [
-        { "name": "fullName", "label": "שם מלא", "isReuired": true },
-        { "name": "phone", "label": "טלפון", "isReuired": true },
-        { "name": "email", "label": "אימייל", "isReuired": true },
-        { "name": "message", "label": "הודעה", "isReuired": false }
+        {
+          "name": "fullName",
+          "label": "שם מלא",
+          "isReuired": true
+        },
+        {
+          "name": "phone",
+          "label": "טלפון",
+          "isReuired": true
+        },
+        {
+          "name": "email",
+          "label": "אימייל",
+          "isReuired": true
+        },
+        {
+          "name": "message",
+          "label": "הודעה",
+          "isReuired": false
+        }
       ]
     },
     "isEmpty": false

@@ -1,83 +1,76 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-
-interface TabPanelProps {
-  children?: React.ReactNode;
-  index: number;
-  selected: boolean;
-}
-
-interface GalleryProps {
-  children?: React.ReactNode;
-  view: any;
-}
+import { TabPanelProps, GalleryProps, Subject } from '../../types/Views/gallery.types'
 
 const style = {
   GalleryBox: { width: '100%' },
   TabsBox: { borderBottom: 1, borderColor: 'divider' },
 }
 
-
-const getTabProps = (tab: any, index: number) => ({
-  value: tab.name,
-  label: tab.label,
-  id: `gallery-tab-${index}`,
-  'aria-controls': `gallery-tabpanel-${index}`,
-})
-
-const TabPanel = (props: TabPanelProps) => {
-  const { children: images, selected, index, ...restProps } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={!selected}
-      id={`gallery-tabpanel-${index}`}
-      aria-labelledby={`gallery-tab-${index}`}
-      {...restProps}
-    >
-      {selected && (
-        <Box sx={{ p: 3 }}>
-          {images}
-        </Box>
-      )}
-    </div>
-  );
-}
-
-const ImagesContainer = ({ data }) => <div>{data.name}</div>
-
-const renderTabs = (subjects: Array<Object>) => subjects.map((subject: any, index: number) => (<Tab {...getTabProps(subject, index)} />))
-
-const renderTabsPanels = (subjects: Array<Object>, tab: string) => {
-  return subjects.map((subject: any, index: number): JSX.Element => {
-    return <TabPanel
-      selected={subject.name === tab}
-      index={index}>
-      <ImagesContainer data={subject} />
-    </TabPanel>
-  })
-}
-
 const Gallery = (props: GalleryProps) => {
-  const { view: { subjects: tabs } } = props
+  const { view: { subjects } } = props
 
-  const [selectedTab, setSelectedTab] = useState(tabs[0].name);
+  const [selectedTab, setSelectedTab] = useState<string | number | null>(0);
 
-  const handleChange = (event: React.SyntheticEvent, newTab: number) => {
-    setSelectedTab(newTab);
+  const handleChange = (event: React.SyntheticEvent, newTabIdx: number) => {
+    setSelectedTab(newTabIdx);
   };
+
+  const getTabProps = (tab: Subject, index: number) => ({
+    value: index,
+    label: tab.label,
+    id: `gallery-tab-${tab.id}`,
+    'aria-controls': `gallery-tabpanel-${tab.id}`,
+  })
+
+  const TabPanel = (props: TabPanelProps) => {
+    const { children: images, selected, index, ...restProps } = props;
+
+    return (
+      <div
+        role="tabpanel"
+        hidden={!selected}
+        id={`gallery-tabpanel-${index}`}
+        aria-labelledby={`gallery-tab-${index}`}
+        {...restProps}
+      >
+        {selected && (
+          <Box sx={{ p: 3 }}>
+            {images}
+          </Box>
+        )}
+      </div>
+    );
+  }
+
+  const ImagesContainer = ({ data }) => <div>{data.name}</div>
+
+  const tabs = useMemo(() => {
+    return subjects.map((subject: Subject, index: number): JSX.Element => {
+      return <Tab {...getTabProps(subject, index)} />
+    })
+  }, [subjects])
+
+  const tabsPanel = useMemo(() => {
+    return subjects.map((subject: Subject, index: number): JSX.Element => {
+      return <TabPanel
+        selected={index === selectedTab}
+        index={index}>
+        <ImagesContainer data={subject} />
+      </TabPanel>
+    })
+  }, [subjects, selectedTab])
 
   return (
     <Box sx={style.GalleryBox}>
       <Box sx={style.TabsBox}>
         <Tabs value={selectedTab} onChange={handleChange} aria-label="gallery tabs">
-          {renderTabs(tabs)}
+          {tabs}
         </Tabs>
       </Box>
-      {renderTabsPanels(tabs, selectedTab)}
+      {tabsPanel}
     </Box>
   );
 }
