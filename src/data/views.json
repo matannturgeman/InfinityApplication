@@ -66,6 +66,11 @@
           "name": "grates",
           "label": "סורגים",
           "images": [""]
+        },
+        {
+          "name": "stairs",
+          "label": "מדרגות",
+          "images": [""]
         }
       ]
     },
