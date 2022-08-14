@@ -25,7 +25,7 @@ const Box = ({ children, ...restProps }) => {
     }, [control, inView]);
 
     return (
-        <motion.div
+        <motion.section
             ref={ref}
             variants={style.boxVariant}
             initial="hidden"
@@ -34,7 +34,7 @@ const Box = ({ children, ...restProps }) => {
             {...restProps}
         >
             {children}
-        </motion.div>
+        </motion.section>
     );
 };
 

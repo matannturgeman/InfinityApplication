@@ -4,3 +4,9 @@ export type View = {
     data: any;
     isEmpty: Boolean;
 };
+
+export interface FormField {
+    name: string;
+    label: string;
+    isRequired: boolean;
+}

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import { View } from "../../types/Views/views.types";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -12,7 +11,7 @@ interface TabPanelProps {
 
 interface GalleryProps {
   children?: React.ReactNode;
-  view: View;
+  view: any;
 }
 
 const style = {
@@ -63,8 +62,7 @@ const renderTabsPanels = (subjects: Array<Object>, tab: string) => {
 }
 
 const Gallery = (props: GalleryProps) => {
-  const { view: galleryView } = props
-  const { data: { subjects: tabs } } = galleryView
+  const { view: { subjects: tabs } } = props
 
   const [selectedTab, setSelectedTab] = useState(tabs[0].name);
 
