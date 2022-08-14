@@ -94,9 +94,7 @@
           "id": 4,
           "name": "grates",
           "label": "סורגים",
-          "images": [
-            ""
-          ]
+          "images": [""]
         }
       ]
     },
