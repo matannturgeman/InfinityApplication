@@ -8,7 +8,7 @@ import { View } from "../../../types/Views/views.types";
 
 function DrawerList({ toggleDrawer, views }: DrawerListProps) {
   return (
-    <Box sx={styles.Box} role="presentation">
+    <Box sx={styles.DrawerBox} role="presentation">
       {views.map(({ value, label }: View) => (
         <ScrollTo
           key={value}
@@ -25,7 +25,7 @@ function DrawerList({ toggleDrawer, views }: DrawerListProps) {
 }
 
 const styles = {
-  Box: { width: 180, paddingRight: 4 },
+  DrawerBox: { width: 180, paddingRight: 4 },
   Button: {
     my: 2,
     width: "100%",
