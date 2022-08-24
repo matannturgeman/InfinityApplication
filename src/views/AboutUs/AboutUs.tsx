@@ -1,4 +1,5 @@
 import React from "react";
+import Form from "../../components/Form/Form";
 import { AboutUsProps, View } from "../../types/Views/about-us.types";
 import { DAYS_MAP } from "../../constants/about.constants";
 import "./AboutUs.scss";
@@ -12,6 +13,12 @@ function AboutUs({ view }: AboutUsProps) {
     email,
     activity: { fromDay, toDay, open, close },
   }: View = view;
+
+  const onSubmit = (e: React.FormEvent) => {
+      e.preventDefault();
+      console.log("enter onSubmit", e);
+  }
+
   return (
     <section className="about-us-page">
       <h1>{text}</h1>
@@ -26,6 +33,8 @@ function AboutUs({ view }: AboutUsProps) {
         <span>{`  יום  ${DAYS_MAP.get(toDay)}' `}</span>
         {open} - {close}
       </h1>
+
+        <Form form={form} onSubmit={onSubmit} />
     </section>
   );
 }

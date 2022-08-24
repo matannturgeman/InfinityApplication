@@ -32,22 +32,26 @@
         {
           "name": "fullName",
           "label": "שם מלא",
-          "isReuired": true
+          "isRequired": true,
+          "type": "text"
         },
         {
           "name": "phone",
           "label": "טלפון",
-          "isReuired": true
+          "isRequired": true,
+          "type": "tel"
         },
         {
           "name": "email",
           "label": "אימייל",
-          "isReuired": true
+          "isRequired": true,
+          "type": "email"
         },
         {
           "name": "message",
           "label": "הודעה",
-          "isReuired": false
+          "isRequired": false,
+          "type": "text"
         }
       ]
     },
@@ -128,22 +132,26 @@
         {
           "name": "fullName",
           "label": "שם מלא",
-          "isReuired": true
+          "isRequired": true,
+          "type": "text"
         },
         {
           "name": "phone",
           "label": "טלפון",
-          "isReuired": true
+          "isRequired": true,
+          "type": "tel"
         },
         {
           "name": "email",
           "label": "אימייל",
-          "isReuired": true
+          "isRequired": true,
+          "type": "email"
         },
         {
           "name": "message",
           "label": "הודעה",
-          "isReuired": false
+          "isRequired": false,
+          "type": "text"
         }
       ]
     },
