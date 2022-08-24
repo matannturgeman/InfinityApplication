@@ -4,9 +4,12 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import "./Box.scss";
 
-const boxVariant = {
-    visible: { opacity: 1, transition: { duration: 0.9 } },
-    hidden: { opacity: 0 },
+
+const style = {
+    boxVariant: {
+        visible: { opacity: 1, transition: { duration: 0.9 } },
+        hidden: { opacity: 0 },
+    }
 }
 
 const Box = ({ children, ...restProps }) => {
@@ -24,7 +27,7 @@ const Box = ({ children, ...restProps }) => {
     return (
         <motion.section
             ref={ref}
-            variants={boxVariant}
+            variants={style.boxVariant}
             initial="hidden"
             animate={control}
             className="box"

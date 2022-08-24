@@ -3,13 +3,15 @@ import Drawer from "@mui/material/Drawer";
 import DrawerList from "./DrawerList";
 import { CustomDrawerProps } from "../../../types/Drawer/drawer.types";
 
+const isKeepDrawerKeyPress = (event: KeyboardEvent | MouseEvent) : Boolean =>
+  event.type === "keydown" &&
+  ((event as KeyboardEvent).key === "Tab" ||
+    (event as KeyboardEvent).key === "Shift")
+
+
 function CustomDrawer({ open, onClose, views }: CustomDrawerProps) {
   const toggleDrawer = (event: KeyboardEvent | MouseEvent): void => {
-    if (
-      event.type === "keydown" &&
-      ((event as KeyboardEvent).key === "Tab" ||
-        (event as KeyboardEvent).key === "Shift")
-    ) {
+    if (isKeepDrawerKeyPress(event)){
       return;
     }
 

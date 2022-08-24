@@ -4,13 +4,13 @@ import ScrollBar from "./ScrollBar/ScrollBar";
 import views from "../../data/views.json";
 
 const MainLayout = (props) => {
-  const { children } = props;
+  const { children: viewsChildren } = props;
 
   return (
     <ScrollBar>
       <Navbar views={views} />
-      {children}
-    </ScrollBar>
+      {viewsChildren}
+     </ScrollBar>
   );
 };
 
