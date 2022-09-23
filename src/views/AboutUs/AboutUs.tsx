@@ -15,26 +15,32 @@ function AboutUs({ view }: AboutUsProps) {
   }: View = view;
 
   const onSubmit = (e: React.FormEvent) => {
-      e.preventDefault();
-      console.log("enter onSubmit", e);
-  }
+    e.preventDefault();
+    console.log("enter onSubmit", e);
+  };
 
   return (
     <section className="about-us-page">
       <h1>{text}</h1>
-      <h1>
-        <p>{owner}</p>
-        <p>{partner}</p>
-      </h1>
-      <h1>{addressText}</h1>
-      <h1>{email}</h1>
-      <h1>
-        <span>{`  יום  ${DAYS_MAP.get(fromDay)}' `}</span>-
-        <span>{`  יום  ${DAYS_MAP.get(toDay)}' `}</span>
-        {open} - {close}
-      </h1>
-
-        <Form form={form} onSubmit={onSubmit} />
+      <div className="about-us-datails-container">
+        <div className="about-us-datails">
+          <h1 className="phone-content">
+            <p>{owner}</p>
+            <p>{partner}</p>
+          </h1>
+          <h1>{addressText}</h1>
+          <h1>{email}</h1>
+          <h1>
+            <span>{`  יום  ${DAYS_MAP.get(fromDay)}' `}</span>-
+            <span>{`  יום  ${DAYS_MAP.get(toDay)}' `}</span>
+            {open} - {close}
+          </h1>
+        </div>
+          <div className="map-container">
+              Map
+          </div>
+      </div>
+      <Form form={form} onSubmit={onSubmit} />
     </section>
   );
 }

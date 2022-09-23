@@ -12,7 +12,14 @@ import { styled } from "@mui/material/styles";
 const InputStyled = styled(Input)(() => ({ color: "white", direction: 'rtl' }));
 const InputLabelStyled = styled(InputLabel)(() => ({ color: "white", right: 20 }));
 const FormHelperTextStyled = styled(FormHelperText)(() => ({ color: "white" }));
-const FormStyled = styled("form")(() => ({ display: "flex", flexDirection: "column", width: "30%", position: "relative" }));
+const FormStyled = styled("form")(() => ({
+  flexDirection: "column",
+  position: "relative",
+  display: "grid",
+  width: "100%",
+  gridTemplateRows: "50% 50%",
+  gridTemplateColumns: "50% 50%",
+}));
 
 function Form(props: FormProps) {
   const { form, onSubmit } = props;
