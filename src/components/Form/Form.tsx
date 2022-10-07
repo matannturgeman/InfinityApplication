@@ -19,6 +19,7 @@ const FormStyled = styled("form")(() => ({
   width: "100%",
   gridTemplateRows: "50% 50%",
   gridTemplateColumns: "50% 50%",
+  marginBottom: 40,
 }));
 
 function Form(props: FormProps) {

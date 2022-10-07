@@ -22,7 +22,7 @@ function AboutUs({ view }: AboutUsProps) {
 
   return (
     <section className="about-us-page">
-      <div className="flex">
+      <div className="flex about-us-elements-container-container">
         <div className="flex column about-us-elements-container">
           <h1 className="about-us-text">{text}</h1>
           <div className="about-us-datails-container">
