@@ -9,14 +9,31 @@
   direction: rtl;
   overflow-y: auto;
 
+  .about-us-elements-container {
+    width: 60%;
+  }
+
+  .about-us-text {
+    width: 94%;
+  }
+
+  .map-container {
+    width: 600px;
+    height: 400px;
+    > div {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   .about-us-datails-container {
     display: flex;
     gap: 10px;
     align-items: flex-start;
     justify-content: space-between;
-    .map-container {
+    height: 358px;
+    margin-top: 30px;
 
-    }
     .about-us-datails {
       .phone-content {
         display: flex;
