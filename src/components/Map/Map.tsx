@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
+import env from "react-dotenv";
 
 const AnyMap = Map as any;
 
@@ -10,9 +11,9 @@ const customizeMap = {
 };
 
 const containerStyle = {
-    position: "relative",
-    width: "100%",
-    height: "100%",
+  position: "relative",
+  width: "100%",
+  height: "100%",
 };
 
 class GoogleMapComponent extends Component {
@@ -66,7 +67,7 @@ class GoogleMapComponent extends Component {
 }
 
 const MapView = GoogleApiWrapper({
-  apiKey: "AIzaSyBE7e89ahNbzJN1rqVTzzc4Ft6jy0r5aqk",
+  apiKey: env.GOOGLE_MAP_KEY,
 })(GoogleMapComponent as any);
 
 const OuterMapView = (props) => <MapView {...props} />;
