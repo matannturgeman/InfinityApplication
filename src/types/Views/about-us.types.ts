@@ -10,7 +10,7 @@ export interface View {
     address: {
         text: string;
         lat: number;
-        long: number;
+        lng: number;
     }
     email: string;
     form: FormField[]
