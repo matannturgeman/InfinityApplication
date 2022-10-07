@@ -2,7 +2,7 @@ import { Scrollbars } from "react-custom-scrollbars-2";
 import "./ScrollBar.scss";
 
 const ScrollBar = (props) => {
-  const { children: view } = props;
+  const { children } = props;
 
   const renderThumb = ({ style, ...props }) => (
     <div className="scroll-bar" style={style} {...props} />
@@ -13,7 +13,7 @@ const ScrollBar = (props) => {
       renderThumbVertical={renderThumb}
       renderThumbHorizontal={renderThumb}
     >
-      {view}
+      {children}
     </Scrollbars>
   );
 };

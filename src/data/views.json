@@ -67,38 +67,86 @@
           "name": "projects",
           "label": "פרוייקטים",
           "images": [
-            ""
+            {
+              "url": "gallery/projects/alisa garden/1d0d067a-1697-4a5a-95b0-458989457d9f.jpg",
+              "group": "alisa garden"
+            },
+            {
+              "url": "gallery/projects/alisa garden/52d4d973-533a-47a8-97e9-a3e44fa8d23f.jpg",
+              "group": "alisa garden"
+            },
+            {
+              "url": "gallery/projects/alisa garden/b6aee6df-95a6-4104-b8f5-0fddb6eda3b2.jpg",
+              "group": "alisa garden"
+            },
+            {
+              "url": "gallery/projects/alisa garden/CGXHDGHJ.jpeg",
+              "group": "alisa garden"
+            },
+            {
+              "url": "gallery/projects/alisa garden/DFGHDGH.jpeg",
+              "group": "alisa garden"
+            },
+            {
+              "url": "gallery/projects/alisa garden/DGBNCVX.jpeg",
+              "group": "alisa garden"
+            },
+            {
+              "url": "gallery/projects/alisa garden/DGHJDGHDGH.jpeg",
+              "group": "alisa garden"
+            },
+            {
+              "url": "gallery/projects/alisa garden/DGHJDGHJ.jpeg",
+              "group": "alisa garden"
+            },
+
+
+
+            {
+              "url": "gallery/projects/hotel david/WhatsApp Image 2022-06-20 at 10.15.21 AM.jpeg",
+              "group": "hotel david"
+            },
+            {
+              "url": "gallery/projects/hotel david/WhatsApp Image 2022-06-20 at 10.15.21 AM (1).jpeg",
+              "group": "hotel david"
+            },
+            {
+              "url": "gallery/projects/hotel david/WhatsApp Image 2022-06-20 at 10.15.22 AM.jpeg",
+              "group": "hotel david"
+            },
+            {
+              "url": "gallery/projects/hotel david/WhatsApp Image 2022-06-20 at 10.15.22 AM (1).jpeg",
+              "group": "hotel david"
+            },
+            {
+              "url": "gallery/projects/hotel david/WhatsApp Image 2022-06-20 at 10.15.22 AM (2).jpeg",
+              "group": "hotel david"
+            }
           ]
         },
         {
           "id": 1,
           "name": "banisters",
           "label": "מעקות",
-          "images": [
-            ""
-          ]
+          "images": []
         },
         {
           "id": 2,
           "name": "gates",
           "label": "שערים",
-          "images": [
-            ""
-          ]
+          "images": []
         },
         {
           "id": 3,
           "name": "constructions",
           "label": "קונסטרוקציות",
-          "images": [
-            ""
-          ]
+          "images": []
         },
         {
           "id": 4,
           "name": "grates",
           "label": "סורגים",
-          "images": [""]
+          "images": []
         }
       ]
     },
