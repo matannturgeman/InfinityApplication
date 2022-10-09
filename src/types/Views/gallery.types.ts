@@ -32,6 +32,7 @@ export type onImageClickType = (image: Image | null) => void;
 export interface ImagesContainerProps {
   data: Image[];
   onImageClick: onImageClickType;
+  isPointer: boolean;
 }
 
 export interface ImageGroup {
@@ -51,4 +52,5 @@ export interface ImageModalProps {
 export interface ImageContainerProps {
   item: Image | null;
   onImageClick: onImageClickType | null;
+  isPointer: boolean;
 }

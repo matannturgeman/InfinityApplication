@@ -14,7 +14,11 @@ function ImageModal({ selectedImage, onClose }: ImageModalProps) {
       aria-describedby="modal-modal-description"
     >
       <Box sx={styles}>
-        <ImageContainer item={selectedImage} onImageClick={null} />
+        <ImageContainer
+          item={selectedImage}
+          onImageClick={null}
+          isPointer={false}
+        />
       </Box>
     </Modal>
   );
