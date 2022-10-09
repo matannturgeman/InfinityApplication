@@ -27,11 +27,18 @@ export interface GalleryProps {
   view: Data;
 }
 
+type onImageClick = (image: Image) => void;
+
 export interface ImageContainerProps {
   data: Image[];
-  onImageClick: (image: Image) => void;
+  onImageClick: onImageClick;
 }
 
 export interface ImageGroup {
   [group: string]: Image[];
+}
+
+export interface ImageGroupContainerProps {
+  images: Image[];
+  onImageClick: onImageClick;
 }

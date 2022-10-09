@@ -1,5 +1,4 @@
 import React, { useState, useMemo } from "react";
-import { groupBy } from "lodash";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
@@ -8,34 +7,9 @@ import {
   GalleryProps,
   Subject,
   Image,
-  ImageContainerProps,
-  ImageGroup,
 } from "../../types/Views/gallery.types";
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
 import { styles } from "./Gallery.styles";
-
-const ImagesContainer = ({
-  data,
-  onImageClick,
-}: ImageContainerProps): JSX.Element => (
-  <ImageList sx={styles.imageContainer} cols={3} rowHeight={164}>
-    {data.map((item: Image): JSX.Element => {
-      const { url: urlItem } = item;
-      const url = require(`../../assets/${urlItem}`);
-      return (
-        <ImageListItem key={urlItem} onClick={() => onImageClick(item)}>
-          <img
-            src={`${url}?w=164&h=164&fit=crop&auto=format`}
-            srcSet={`${url}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-            alt={urlItem.split("/").pop()}
-            loading="lazy"
-          />
-        </ImageListItem>
-      );
-    })}
-  </ImageList>
-);
+import ImageGroupContainer from "./ImageGroupContainer";
 
 const TabPanel = (props: TabPanelProps): JSX.Element => {
   const {
@@ -69,7 +43,7 @@ const Gallery = (props: GalleryProps) => {
     setSelectedTab(newTabIdx);
   };
 
-  const onImageClick = (image) => {
+  const onImageClick = (image: Image) => {
     console.log({ image });
   };
 
@@ -84,7 +58,6 @@ const Gallery = (props: GalleryProps) => {
 
   const renderTabPanel = () =>
     subjects.map((subject: Subject, index: number): JSX.Element => {
-      const imagesGroup: ImageGroup = groupBy(subject.images, "group");
       return (
         <TabPanel
           selected={index === selectedTab}
@@ -93,14 +66,10 @@ const Gallery = (props: GalleryProps) => {
           style={styles.tabPanel}
           key={subject.name}
         >
-          {Object.entries(imagesGroup).map(
-            ([group, images]: [string, Image[]]): JSX.Element => (
-              <div key={group}>
-                <h1 style={styles.title}>{group}</h1>
-                <ImagesContainer data={images} onImageClick={onImageClick} />
-              </div>
-            )
-          )}
+          <ImageGroupContainer
+            images={subject.images}
+            onImageClick={onImageClick}
+          />
         </TabPanel>
       );
     });
