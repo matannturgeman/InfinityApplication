@@ -19,7 +19,7 @@ const ImageGroupContainer = ({
         ([group, images]: [string, Image[]]): JSX.Element => (
           <div key={group}>
             <h1 style={styles.title}>{group}</h1>
-            <ImagesContainer data={images} onImageClick={onImageClick} />
+            <ImagesContainer data={images} onImageClick={onImageClick} isPointer />
           </div>
         )
       )}

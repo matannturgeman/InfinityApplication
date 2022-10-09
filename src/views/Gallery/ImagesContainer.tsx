@@ -7,11 +7,16 @@ import ImageContainer from "./ImageContainer";
 const ImagesContainer = ({
   data,
   onImageClick,
+  isPointer,
 }: ImagesContainerProps): JSX.Element => (
   <ImageList sx={styles.imageContainer} cols={3} rowHeight={164}>
     {data.map(
       (item: Image): JSX.Element => (
-        <ImageContainer item={item} onImageClick={onImageClick} />
+        <ImageContainer
+          item={item}
+          onImageClick={onImageClick}
+          isPointer={isPointer}
+        />
       )
     )}
   </ImageList>
