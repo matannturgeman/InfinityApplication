@@ -1,9 +1,13 @@
-  
- export interface Subject {
+export interface Image {
+  url: string;
+  group: string;
+}
+
+export interface Subject {
   id: number | string;
   name: string;
   label: string;
-  images: string[];
+  images: Image[];
 }
 
 export interface Data {
@@ -11,12 +15,40 @@ export interface Data {
 }
 
 export interface TabPanelProps {
-    children?: React.ReactNode;
-    index: number;
-    selected: boolean;
-  }
-  
- export  interface GalleryProps {
-    children?: React.ReactNode;
-    view: Data;
-  }
+  children?: React.ReactNode;
+  index: number;
+  selected: boolean;
+  boxStyles?: any;
+  style?: any;
+}
+
+export interface GalleryProps {
+  children?: React.ReactNode;
+  view: Data;
+}
+
+export type onImageClickType = (image: Image | null) => void;
+
+export interface ImagesContainerProps {
+  data: Image[];
+  onImageClick: onImageClickType;
+}
+
+export interface ImageGroup {
+  [group: string]: Image[];
+}
+
+export interface ImageGroupContainerProps {
+  images: Image[];
+  onImageClick: onImageClickType;
+}
+
+export interface ImageModalProps {
+  selectedImage: Image | null;
+  onClose: () => void;
+}
+
+export interface ImageContainerProps {
+  item: Image | null;
+  onImageClick: onImageClickType | null;
+}
