@@ -27,11 +27,11 @@ export interface GalleryProps {
   view: Data;
 }
 
-type onImageClick = (image: Image) => void;
+export type onImageClickType = (image: Image | null) => void;
 
-export interface ImageContainerProps {
+export interface ImagesContainerProps {
   data: Image[];
-  onImageClick: onImageClick;
+  onImageClick: onImageClickType;
 }
 
 export interface ImageGroup {
@@ -40,5 +40,15 @@ export interface ImageGroup {
 
 export interface ImageGroupContainerProps {
   images: Image[];
-  onImageClick: onImageClick;
+  onImageClick: onImageClickType;
+}
+
+export interface ImageModalProps {
+  selectedImage: Image | null;
+  onClose: () => void;
+}
+
+export interface ImageContainerProps {
+  item: Image | null;
+  onImageClick: onImageClickType | null;
 }

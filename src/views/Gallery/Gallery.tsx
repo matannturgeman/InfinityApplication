@@ -10,6 +10,7 @@ import {
 } from "../../types/Views/gallery.types";
 import { styles } from "./Gallery.styles";
 import ImageGroupContainer from "./ImageGroupContainer";
+import ImageModal from "./ImageModal";
 
 const TabPanel = (props: TabPanelProps): JSX.Element => {
   const {
@@ -38,13 +39,14 @@ const Gallery = (props: GalleryProps) => {
     view: { subjects },
   } = props;
   const [selectedTab, setSelectedTab] = useState<number>(0);
+  const [selectedImage, setSelectedImage] = useState<Image | null>(null);
 
   const handleChange = (event: React.SyntheticEvent, newTabIdx: number) => {
     setSelectedTab(newTabIdx);
   };
 
-  const onImageClick = (image: Image) => {
-    console.log({ image });
+  const onImageClick = (image: Image | null) => {
+    setSelectedImage(image)
   };
 
   const renderTabs = () =>
@@ -76,6 +78,10 @@ const Gallery = (props: GalleryProps) => {
 
   const tabsPanel = useMemo(renderTabPanel, [subjects, selectedTab]);
 
+  const onCloseImageModal = () => {
+    setSelectedImage(null)
+  }
+
   return (
     <Box sx={styles.GalleryBox}>
       <Box sx={styles.TabsBox}>
@@ -89,6 +95,7 @@ const Gallery = (props: GalleryProps) => {
         </Tabs>
       </Box>
       {tabsPanel}
+      <ImageModal selectedImage={selectedImage} onClose={onCloseImageModal} />
     </Box>
   );
 };
