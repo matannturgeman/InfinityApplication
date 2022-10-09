@@ -26,3 +26,12 @@ export interface GalleryProps {
   children?: React.ReactNode;
   view: Data;
 }
+
+export interface ImageContainerProps {
+  data: Image[];
+  onImageClick: (image: Image) => void;
+}
+
+export interface ImageGroup {
+  [group: string]: Image[];
+}

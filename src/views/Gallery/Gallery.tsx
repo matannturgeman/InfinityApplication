@@ -7,44 +7,24 @@ import {
   TabPanelProps,
   GalleryProps,
   Subject,
+  Image,
+  ImageContainerProps,
+  ImageGroup,
 } from "../../types/Views/gallery.types";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
+import { styles } from "./Gallery.styles";
 
-const styles = {
-  GalleryBox: {
-    width: "100%",
-    height: "100%",
-    background:
-      "linear-gradient(90deg, rgba(157,157,157,1) 0%, rgba(200,200,203,1) 45%, rgba(255,255,255,1) 100%);",
-  },
-  TabsBox: {
-    borderBottom: 1,
-    borderColor: "divider",
-  },
-  title: {
-    color: "black",
-    fontSize: 16,
-    textTransform: "capitalize",
-    margin: "0px 0 12px 0",
-    textAlign: "center",
-  },
-  imageContainer: { width: 500, height: "90%" },
-  groupContainer: {},
-  tabPanelBox: {
-    display: "flex",
-    gap: 23,
-    height: "100%",
-  },
-  tabPanel: { marginTop: 12, height: "100%" },
-} as any;
-
-const ImagesContainer = ({ data }) => (
+const ImagesContainer = ({
+  data,
+  onImageClick,
+}: ImageContainerProps): JSX.Element => (
   <ImageList sx={styles.imageContainer} cols={3} rowHeight={164}>
-    {data.map(({ url: urlItem }) => {
+    {data.map((item: Image): JSX.Element => {
+      const { url: urlItem } = item;
       const url = require(`../../assets/${urlItem}`);
       return (
-        <ImageListItem key={urlItem}>
+        <ImageListItem key={urlItem} onClick={() => onImageClick(item)}>
           <img
             src={`${url}?w=164&h=164&fit=crop&auto=format`}
             srcSet={`${url}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
@@ -57,7 +37,7 @@ const ImagesContainer = ({ data }) => (
   </ImageList>
 );
 
-const TabPanel = (props: TabPanelProps) => {
+const TabPanel = (props: TabPanelProps): JSX.Element => {
   const {
     children: images,
     selected,
@@ -83,40 +63,49 @@ const Gallery = (props: GalleryProps) => {
   const {
     view: { subjects },
   } = props;
-  const [selectedTab, setSelectedTab] = useState<string | number | null>(0);
+  const [selectedTab, setSelectedTab] = useState<number>(0);
 
   const handleChange = (event: React.SyntheticEvent, newTabIdx: number) => {
     setSelectedTab(newTabIdx);
   };
 
-  const tabs = useMemo(() => {
-    return subjects.map((subject: Subject, index: number): JSX.Element => {
-      return <Tab value={index} label={subject.label} />;
-    });
-  }, [subjects]);
+  const onImageClick = (image) => {
+    console.log({ image });
+  };
 
-  const tabsPanel = useMemo(
-    () =>
-      subjects.map((subject: Subject, index: number): JSX.Element => {
-        const imagesGroup = groupBy(subject.images, "group");
-        return (
-          <TabPanel
-            selected={index === selectedTab}
-            index={index}
-            boxStyles={styles.tabPanelBox}
-            style={styles.tabPanel}
-          >
-            {Object.entries(imagesGroup).map(([group, images]) => (
+  const renderTabs = () =>
+    subjects.map(
+      (subject: Subject, index: number): JSX.Element => (
+        <Tab value={index} label={subject.label} key={subject.name} />
+      )
+    );
+
+  const tabs = useMemo(renderTabs, [subjects]);
+
+  const renderTabPanel = () =>
+    subjects.map((subject: Subject, index: number): JSX.Element => {
+      const imagesGroup: ImageGroup = groupBy(subject.images, "group");
+      return (
+        <TabPanel
+          selected={index === selectedTab}
+          index={index}
+          boxStyles={styles.tabPanelBox}
+          style={styles.tabPanel}
+          key={subject.name}
+        >
+          {Object.entries(imagesGroup).map(
+            ([group, images]: [string, Image[]]): JSX.Element => (
               <div key={group}>
                 <h1 style={styles.title}>{group}</h1>
-                <ImagesContainer data={images} />
+                <ImagesContainer data={images} onImageClick={onImageClick} />
               </div>
-            ))}
-          </TabPanel>
-        );
-      }),
-    [subjects, selectedTab]
-  );
+            )
+          )}
+        </TabPanel>
+      );
+    });
+
+  const tabsPanel = useMemo(renderTabPanel, [subjects, selectedTab]);
 
   return (
     <Box sx={styles.GalleryBox}>
