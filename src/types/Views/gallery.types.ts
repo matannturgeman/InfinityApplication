@@ -20,6 +20,7 @@ export interface TabPanelProps {
   selected: boolean;
   boxStyles?: any;
   style?: any;
+  name?: string;
 }
 
 export interface GalleryProps {
