@@ -3,36 +3,14 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import {
-  TabPanelProps,
   GalleryProps,
   Subject,
   Image,
 } from "../../types/Views/gallery.types";
-import { styles } from "./Gallery.styles";
+import TabPanel from "../../components/TabPanel/TabPanel";
 import ImageGroupContainer from "./ImageGroupContainer";
 import ImageModal from "./ImageModal";
-
-const TabPanel = (props: TabPanelProps): JSX.Element => {
-  const {
-    children: images,
-    selected,
-    index,
-    boxStyles = { p: 3 },
-    ...restProps
-  } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={!selected}
-      id={`gallery-tabpanel-${index}`}
-      aria-labelledby={`gallery-tab-${index}`}
-      {...restProps}
-    >
-      {selected && <Box sx={boxStyles}>{images}</Box>}
-    </div>
-  );
-};
+import { styles } from "./Gallery.styles";
 
 const Gallery = (props: GalleryProps) => {
   const {
@@ -46,7 +24,7 @@ const Gallery = (props: GalleryProps) => {
   };
 
   const onImageClick = (image: Image | null) => {
-    setSelectedImage(image)
+    setSelectedImage(image);
   };
 
   const renderTabs = () =>
@@ -59,28 +37,29 @@ const Gallery = (props: GalleryProps) => {
   const tabs = useMemo(renderTabs, [subjects]);
 
   const renderTabPanel = () =>
-    subjects.map((subject: Subject, index: number): JSX.Element => {
-      return (
+    subjects.map(
+      (subject: Subject, index: number): JSX.Element => (
         <TabPanel
           selected={index === selectedTab}
           index={index}
           boxStyles={styles.tabPanelBox}
           style={styles.tabPanel}
           key={subject.name}
+          name="gallery"
         >
           <ImageGroupContainer
             images={subject.images}
             onImageClick={onImageClick}
           />
         </TabPanel>
-      );
-    });
+      )
+    );
 
   const tabsPanel = useMemo(renderTabPanel, [subjects, selectedTab]);
 
   const onCloseImageModal = () => {
-    setSelectedImage(null)
-  }
+    setSelectedImage(null);
+  };
 
   return (
     <Box sx={styles.GalleryBox}>
