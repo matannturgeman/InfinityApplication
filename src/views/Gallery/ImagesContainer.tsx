@@ -16,6 +16,7 @@ const ImagesContainer = ({
           item={item}
           onImageClick={onImageClick}
           isPointer={isPointer}
+          key={`${item.group} - ${item.url}`}
         />
       )
     )}
