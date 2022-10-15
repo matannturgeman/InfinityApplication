@@ -151,8 +151,14 @@
               "url": "gallery/projects/alisa garden/חלונות מסתובבים גני אליזה 2.jpeg",
               "group": "alisa garden"
             },
-
-
+            {
+              "url": "gallery/projects/alisa garden/חלונות מסתובבים ומשרביות גני אליזה.jpeg",
+              "group": "alisa garden"
+            },
+            {
+              "url": "gallery/projects/alisa garden/משרביות ובר ובוט ישיבה גני אליזה.jpeg",
+              "group": "alisa garden"
+            },
 
             {
               "url": "gallery/projects/hotel david/WhatsApp Image 2022-06-20 at 10.15.21 AM.jpeg",
@@ -172,6 +178,22 @@
             },
             {
               "url": "gallery/projects/hotel david/WhatsApp Image 2022-06-20 at 10.15.22 AM (2).jpeg",
+              "group": "hotel david"
+            },
+            {
+              "url": "gallery/projects/hotel david/WhatsApp Image 2022-06-20 at 10.15.37 AM.jpeg",
+              "group": "hotel david"
+            },
+            {
+              "url": "gallery/projects/hotel david/WhatsApp Image 2022-06-20 at 10.15.38 AM.jpeg",
+              "group": "hotel david"
+            },
+            {
+              "url": "gallery/projects/hotel david/WhatsApp Image 2022-06-20 at 10.16.56 AM.jpeg",
+              "group": "hotel david"
+            },
+            {
+              "url": "gallery/projects/hotel david/WhatsApp Image 2022-06-20 at 10.16.57 AM.jpeg",
               "group": "hotel david"
             }
           ]
