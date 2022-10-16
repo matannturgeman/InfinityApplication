@@ -34,6 +34,7 @@ export interface ImagesContainerProps {
   data: Image[];
   onImageClick: onImageClickType;
   isPointer: boolean;
+  isTitleDisplayed: boolean;
 }
 
 export interface ImageGroup {

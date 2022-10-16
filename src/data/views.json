@@ -159,7 +159,6 @@
               "url": "gallery/projects/alisa garden/משרביות ובר ובוט ישיבה גני אליזה.jpeg",
               "group": "alisa garden"
             },
-
             {
               "url": "gallery/projects/hotel david/WhatsApp Image 2022-06-20 at 10.15.21 AM.jpeg",
               "group": "hotel david"
@@ -195,6 +194,42 @@
             {
               "url": "gallery/projects/hotel david/WhatsApp Image 2022-06-20 at 10.16.57 AM.jpeg",
               "group": "hotel david"
+            },
+            {
+              "url": "gallery/projects/vista coffee house/WhatsApp Image 2022-06-20 at 10.17.02 AM (2).jpeg",
+              "group": "vista coffee house"
+            },
+            {
+              "url": "gallery/projects/vista coffee house/WhatsApp Image 2022-06-20 at 10.17.02 AM (3).jpeg",
+              "group": "vista coffee house"
+            },
+            {
+              "url": "gallery/projects/vista coffee house/WhatsApp Image 2022-06-20 at 10.17.03 AM.jpeg",
+              "group": "vista coffee house"
+            },
+            {
+              "url": "gallery/projects/vista coffee house/WhatsApp Image 2022-06-20 at 10.17.03 AM (1).jpeg",
+              "group": "vista coffee house"
+            },
+            {
+              "url": "gallery/projects/vista coffee house/WhatsApp Image 2022-06-20 at 10.17.03 AM (2).jpeg",
+              "group": "vista coffee house"
+            },
+            {
+              "url": "gallery/projects/vista coffee house/WhatsApp Image 2022-06-20 at 10.18.23 AM.jpeg",
+              "group": "vista coffee house"
+            },
+            {
+              "url": "gallery/projects/vista coffee house/WhatsApp Image 2022-06-20 at 10.18.23 AM (1).jpeg",
+              "group": "vista coffee house"
+            },
+            {
+              "url": "gallery/projects/vista coffee house/WhatsApp Image 2022-06-20 at 10.18.24 AM.jpeg",
+              "group": "vista coffee house"
+            },
+            {
+              "url": "gallery/projects/vista coffee house/WhatsApp Image 2022-06-20 at 10.18.24 AM (1).jpeg",
+              "group": "vista coffee house"
             }
           ]
         },
@@ -202,7 +237,104 @@
           "id": 1,
           "name": "banisters",
           "label": "מעקות",
-          "images": []
+          "images": [
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-06-20 at 10.18.30 AM (2).jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-06-20 at 10.18.31 AM (1).jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-06-20 at 10.18.31 AM (2).jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-06-20 at 10.18.31 AM.jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-07-29 at 11.40.06.jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-07-29 at 11.40.07.jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-07-29 at 11.40.08.jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-08-02 at 14.13.02.jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-08-02 at 14.13.04.jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-08-02 at 14.13.05.jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-08-02 at 14.13.07.jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-08-02 at 14.13.09.jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-08-02 at 14.13.10.jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-08-02 at 14.13.12.jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-06-20 at 10.15.05 AM.jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-06-20 at 10.15.06 AM (2).jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-06-20 at 10.15.06 AM (3).jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-06-20 at 10.15.06 AM.jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-06-20 at 10.15.39 AM (1).jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-06-20 at 10.15.39 AM (2).jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-06-20 at 10.15.39 AM (3).jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-06-20 at 10.17.00 AM (2).jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-06-20 at 10.17.00 AM (3).jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-06-20 at 10.17.01 AM (1).jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-06-20 at 10.17.01 AM (2).jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-06-20 at 10.17.01 AM.jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-06-20 at 10.17.02 AM.jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-06-20 at 10.18.26 AM (1).jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-06-20 at 10.18.26 AM (2).jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-06-20 at 10.18.26 AM (3).jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-06-20 at 10.18.27 AM.jpeg"
+            },
+            {
+              "url": "gallery/banisters/WhatsApp Image 2022-06-20 at 10.18.30 AM (1).jpeg"
+            }
+          ]
         },
         {
           "id": 2,

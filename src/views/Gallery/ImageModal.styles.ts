@@ -1,3 +1,5 @@
+import { MOBILE_WIDTH_BRAKEPOINT } from "../../constants/utils.constants";
+
 export const styles = {
   box: {
     position: "absolute" as "absolute",
@@ -11,7 +13,7 @@ export const styles = {
     boxShadow: 24,
     p: 4,
     justifyContent: "center",
-    ["@media (max-width:768px)"]: { // eslint-disable-line no-useless-computed-key
+    [`@media (max-width:${MOBILE_WIDTH_BRAKEPOINT}px)`]: { // eslint-disable-line no-useless-computed-key
       width: "85vw",
       padding: "10px",
     },
@@ -21,8 +23,8 @@ export const styles = {
     right: 7,
     top: 7,
     cursor: "pointer",
-    ["@media (max-width:768px)"]: { // eslint-disable-line no-useless-computed-key
-      display: "none"
+    [`@media (max-width:${MOBILE_WIDTH_BRAKEPOINT}px)`]: { // eslint-disable-line no-useless-computed-key
+      display: "none",
     },
   },
 };

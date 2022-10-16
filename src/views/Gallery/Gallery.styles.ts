@@ -1,3 +1,5 @@
+import { MOBILE_WIDTH_BRAKEPOINT } from "../../constants/utils.constants";
+
 export const styles = {
   GalleryBox: {
     width: "100%",
@@ -19,7 +21,7 @@ export const styles = {
   imageContainer: {
     width: 500,
     height: "90%",
-    ["@media (max-width:768px)"]: { // eslint-disable-line no-useless-computed-key
+    [`@media (max-width:${MOBILE_WIDTH_BRAKEPOINT}px)`]: { // eslint-disable-line no-useless-computed-key
       height: "100%",
     },
   },
@@ -28,9 +30,9 @@ export const styles = {
     display: "flex",
     gap: 23,
     height: "93%",
-    ["@media (max-width:768px)"]: { // eslint-disable-line no-useless-computed-key
+    [`@media (max-width:${MOBILE_WIDTH_BRAKEPOINT}px)`]: { // eslint-disable-line no-useless-computed-key
       flexDirection: "column",
-      overflowY: "auto"
+      overflowY: "auto",
     },
   },
   tabPanel: {
@@ -39,9 +41,9 @@ export const styles = {
     padding: "20px",
   },
   imageListItem: {
-    ["@media (max-width:768px)"]: { // eslint-disable-line no-useless-computed-key
+    [`@media (max-width:${MOBILE_WIDTH_BRAKEPOINT}px)`]: { // eslint-disable-line no-useless-computed-key
       overflowY: "none",
     },
   },
-  pointer: { cursor: "pointer" }
+  pointer: { cursor: "pointer" },
 } as any;
