@@ -15,11 +15,6 @@ function AboutUs({ view }: AboutUsProps) {
     activity: { fromDay, toDay, open, close },
   }: View = view;
 
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("enter onSubmit", e);
-  };
-
   return (
     <section className="about-us-page">
       <div className="flex about-us-elements-container-container">
@@ -47,7 +42,7 @@ function AboutUs({ view }: AboutUsProps) {
         </div>
       </div>
 
-      <Form form={form} onSubmit={onSubmit} />
+      <Form form={form} />
     </section>
   );
 }

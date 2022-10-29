@@ -19,5 +19,4 @@ export type FormFields = FormField[];
 
 export interface FormProps {
     form: FormFields;
-    onSubmit: (e:  React.FormEvent) => void;
 }

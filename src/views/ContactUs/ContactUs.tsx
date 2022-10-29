@@ -18,11 +18,6 @@ function ContactUs({ view }: ContactUsProps) {
     activity: { fromDay, toDay, open, close },
   }: View = view;
 
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("enter onSubmit", e);
-  };
-
   const onLinkClicked = (link) => {
     window?.open?.(link, "_blank")?.focus?.();
   };
@@ -63,7 +58,7 @@ function ContactUs({ view }: ContactUsProps) {
         </div>
       </div>
 
-      <Form form={form} onSubmit={onSubmit} />
+      <Form form={form} />
     </section>
   );
 }
