@@ -45,5 +45,4 @@ export const styles = {
       overflowY: "none",
     },
   },
-  pointer: { cursor: "pointer" },
 } as any;

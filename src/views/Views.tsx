@@ -1,11 +1,15 @@
 import * as React from "react";
+
 import Box from "../components/Box/Box";
 import EmptyBox from "../components/EmptyBox/EmptyBox";
+
 import AboutUs from "./AboutUs/AboutUs";
 import Gallery from "./Gallery/Gallery";
+import ContactUs from "./ContactUs/ContactUs";
+
 import views from "../data/views.json";
-import { View } from "../types/Views/views.types";
 import { VIEWS } from "../constants/views.constants";
+import { View } from "../types/Views/views.types";
 
 
 function Views() {
@@ -18,6 +22,9 @@ function Views() {
       }
       case VIEWS.gallery: {
         return <Gallery view={data} />
+      }
+      case VIEWS.ContactUs: {
+        return <ContactUs view={data} />
       }
       default:
         return <h1>Example Text</h1>
