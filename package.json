@@ -22,7 +22,6 @@
     "framer-motion": "^6.5.1",
     "google-maps-react": "^2.0.6",
     "lodash": "^4.17.21",
-    "node-sass": "^7.0.1",
     "postcss": "^8.4.16",
     "postcss-cli": "^10.0.0",
     "prettier": "^2.7.1",
