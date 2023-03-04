@@ -1,5 +1,6 @@
-export const VIEWS = {
-    aboutUs: "about-us",
-    gallery: "gallery",
-    ContactUs: "contact-us"
+export enum VIEWS {
+  home = "home",
+  aboutUs = "about-us",
+  gallery = "gallery",
+  ContactUs = "contact-us",
 }

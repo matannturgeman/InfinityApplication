@@ -1,0 +1,17 @@
+.home-page {
+  background: #040404bd;
+  width: 80%;
+  height: 80%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  direction: rtl;
+  overflow-y: auto;
+
+  .home-elements-container-container {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+}
