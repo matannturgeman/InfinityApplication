@@ -11,8 +11,9 @@ import { FormField, FormProps } from "../../types/Views/views.types";
 import { styled } from "@mui/material/styles";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
+import env from "react-dotenv";
 
-import { TEMPLATE_ID, PUBLIC_ID, SERVICE_ID } from "../../emailkey";
+const { TEMPLATE_ID, PUBLIC_ID, SERVICE_ID } = env;
 
 const InputStyled = styled(Input)(() => ({ color: "white", direction: "rtl" }));
 const InputLabelStyled = styled(InputLabel)(() => ({
