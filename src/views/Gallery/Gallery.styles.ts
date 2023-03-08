@@ -3,9 +3,13 @@ import { MOBILE_WIDTH_BRAKEPOINT } from "../../constants/utils.constants";
 export const styles = {
   GalleryBox: {
     width: "100%",
-    height: "100%",
+    height: "89.5%",
+    marginTop: "auto",
     background:
       "linear-gradient(90deg, rgba(157,157,157,1) 0%, rgba(200,200,203,1) 45%, rgba(255,255,255,1) 100%);",
+    [`@media (max-width:${MOBILE_WIDTH_BRAKEPOINT}px)`]: { // eslint-disable-line no-useless-computed-key
+      height: "91%",
+    },
   },
   TabsBox: {
     borderBottom: 1,
