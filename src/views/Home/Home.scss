@@ -15,8 +15,11 @@
     height: 100%;
 
     >div {
-      @media (max-width: 768px) {
-        scale: 0.6;
+      width: 100%;
+
+      >iframe {
+        width: 100%;
+
       }
     }
   }
