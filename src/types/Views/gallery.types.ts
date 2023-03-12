@@ -44,6 +44,7 @@ export interface ImageGroup {
 export interface ImageGroupContainerProps {
   images: Image[];
   onImageClick: onImageClickType;
+  isTitleDisplayed: boolean;
 }
 
 export interface ImageModalProps {

@@ -1,4 +1,5 @@
-import React, { useState, useMemo } from "react";
+import React, { useState } from "react";
+import { groupBy } from "lodash";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
@@ -29,27 +30,39 @@ const RenderTabPanel = ({
   subjects,
   selectedTab,
   onImageClick,
-}): JSX.Element => (
-  <>
-    {subjects.map(
-      (subject: Subject, index: number): JSX.Element => (
-        <TabPanel
-          selected={index === selectedTab}
-          index={index}
-          boxStyles={styles.tabPanelBox}
-          style={styles.tabPanel}
-          key={subject.name}
-          name="gallery"
-        >
-          <ImageGroupContainer
-            images={subject.images}
-            onImageClick={onImageClick}
-          />
-        </TabPanel>
-      )
-    )}
-  </>
-);
+}): JSX.Element => {
+  return (
+    <>
+      {subjects.map((subject: Subject, index: number): JSX.Element => {
+        const selected = index === selectedTab;
+        const isTitleDisplayed = subject.images.some(
+          ({ group }) => !["undefined", "null", ""].includes(String(group))
+        );
+        const repeat = isTitleDisplayed ? 3 : 1;
+        const boxStyles = {
+          ...styles.tabPanelBox,
+          gridTemplateColumns: `repeat(${repeat}, 1fr)`,
+        };
+        return (
+          <TabPanel
+            selected={selected}
+            index={index}
+            boxStyles={boxStyles}
+            style={styles.tabPanel}
+            key={`${subject.name ?? "no-name"}_${index}`}
+            name="gallery"
+          >
+            <ImageGroupContainer
+              images={subject.images}
+              onImageClick={onImageClick}
+              isTitleDisplayed={isTitleDisplayed}
+            />
+          </TabPanel>
+        );
+      })}
+    </>
+  );
+};
 
 const Gallery = (props: GalleryProps) => {
   const {

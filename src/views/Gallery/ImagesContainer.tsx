@@ -12,14 +12,15 @@ const ImagesContainer = ({
   isTitleDisplayed,
 }: ImagesContainerProps): JSX.Element => {
   const isMobile = useIsMobile();
+  const imageListStyle = {
+    ...styles.imageContainer,
+    ...(isMobile || !isTitleDisplayed ? { width: "100%" } : {}),
+  };
   return (
     <ImageList
-      sx={{
-        ...styles.imageContainer,
-        ...(isTitleDisplayed ? {} : { width: "100%" }),
-      }}
+      sx={imageListStyle}
       cols={!isTitleDisplayed && !isMobile ? 5 : 3}
-      rowHeight={isMobile? 160 : 300}
+      rowHeight={300}
     >
       {data.map(
         (item: Image): JSX.Element => (

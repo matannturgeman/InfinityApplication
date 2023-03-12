@@ -18,19 +18,18 @@ const ImageGroupContainer = ({
       {Object.entries(imagesGroup).map(
         ([group, images]: [string, Image[]]): JSX.Element => {
           const isTitleDisplayed = !["undefined", "null", ""].includes(group);
+      
           return (
-              <div key={group}>
-                {isTitleDisplayed && (
-                  <h1 style={styles.title}>{group}</h1>
-                  )}
-                <ImagesContainer
-                    data={images}
-                    onImageClick={onImageClick}
-                    isPointer
-                    isTitleDisplayed={isTitleDisplayed}
-                />
-              </div>
-          )
+            <div key={group}>
+              {isTitleDisplayed && <h1 style={styles.title}>{group}</h1>}
+              <ImagesContainer
+                data={images}
+                onImageClick={onImageClick}
+                isPointer
+                isTitleDisplayed={isTitleDisplayed}
+              />
+            </div>
+          );
         }
       )}
     </>

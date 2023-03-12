@@ -7,7 +7,7 @@ export const styles = {
     marginTop: "auto",
     background:
       "linear-gradient(90deg, rgba(157,157,157,1) 0%, rgba(200,200,203,1) 45%, rgba(255,255,255,1) 100%);",
-    [`@media (max-width:${MOBILE_WIDTH_BRAKEPOINT}px)`]: { // eslint-disable-line no-useless-computed-key
+    [`@media (max-width:${MOBILE_WIDTH_BRAKEPOINT}px)`]: {
       height: "91%",
     },
   },
@@ -23,20 +23,22 @@ export const styles = {
     textAlign: "center",
   },
   imageContainer: {
-    width: 500,
     height: "90%",
-    [`@media (max-width:${MOBILE_WIDTH_BRAKEPOINT}px)`]: { // eslint-disable-line no-useless-computed-key
+    [`@media (max-width:${MOBILE_WIDTH_BRAKEPOINT}px)`]: {
       height: "100%",
     },
   },
   groupContainer: {},
   tabPanelBox: {
-    display: "flex",
-    gap: 23,
+    display: "grid",
+    gridTemplateRows: "100%",
+    gridAutoFlow: "column",
+    gap: 5,
     height: "93%",
-    [`@media (max-width:${MOBILE_WIDTH_BRAKEPOINT}px)`]: { // eslint-disable-line no-useless-computed-key
-      flexDirection: "column",
+    [`@media (max-width:${MOBILE_WIDTH_BRAKEPOINT}px)`]: {
       overflowY: "auto",
+      gridTemplateColumns: "1fr",
+      gridTemplateRows: "repeat(3, 1000px)",
     },
   },
   tabPanel: {
@@ -45,7 +47,12 @@ export const styles = {
     padding: "20px",
   },
   imageListItem: {
-    [`@media (max-width:${MOBILE_WIDTH_BRAKEPOINT}px)`]: { // eslint-disable-line no-useless-computed-key
+    display: "flex",
+    justifyContent: "center",
+    height: "100%",
+    alignItems: "center",
+
+    [`@media (max-width:${MOBILE_WIDTH_BRAKEPOINT}px)`]: {
       overflowY: "none",
     },
   },
