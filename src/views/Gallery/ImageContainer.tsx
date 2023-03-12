@@ -12,10 +12,14 @@ const ImageContainer = ({
   const { url: urlItem } = item ?? {};
   const url = require(`../../assets/${urlItem}`);
   const pointerStyles = isPointer ? viewsStyles.pointer : {};
-  const sx = { ...styles.imageListItem, ...pointerStyles };
+  const sx = { ...styles.imageListItem, ...pointerStyles }; 
 
   return (
-    <ImageListItem key={urlItem} onClick={() => onImageClick?.(item)} sx={sx}>
+    <ImageListItem
+      key={urlItem}
+      onClick={() => onImageClick?.(item)}
+      sx={sx}
+    >
       <img
         src={`${url}?w=164&h=164&fit=crop&auto=format`}
         srcSet={`${url}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
