@@ -8,7 +8,6 @@ const MainLayout = (props) => {
 
   return (
     <ScrollBar>
-      <Navbar views={views} />
       {viewsChildren}
      </ScrollBar>
   );
