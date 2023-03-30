@@ -2,23 +2,26 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import ListItem from "@mui/material/ListItem";
 import { DrawerListProps } from "../../../types/Drawer/DrawerList/drawerList.types";
-import ScrollTo from "react-scroll-into-view";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 import { View } from "../../../types/Views/views.types";
 
-function DrawerList({ toggleDrawer, views }: DrawerListProps) {
+function DrawerList({ onClose, views }: DrawerListProps) {
   return (
     <Box sx={styles.DrawerBox} role="presentation">
       {views.map(({ value, label }: View) => (
-        <ScrollTo
+        <Link
           key={value}
-          selector={`#page-${value}`}
-          onClick={(event: MouseEvent) => toggleDrawer(event)}
+          to={`/${value}`}
+          onClick={onClose}
+          className="router-link"
         >
-          <ListItem disablePadding sx={styles.ListItems}>
-            <Button sx={styles.Button}>{label}</Button>
+          <ListItem disablePadding sx={styles.ListItems} onClick={onClose}>
+            <Button onClick={onClose} sx={styles.Button}>
+              {label}
+            </Button>
           </ListItem>
-        </ScrollTo>
+        </Link>
       ))}
     </Box>
   );

@@ -1,5 +1,5 @@
-export const styles =  {
+export const styles = {
   pointer: {
-	cursor: "pointer"
-  }
+    cursor: "pointer",
+  },
 };

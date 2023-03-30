@@ -1,18 +1,12 @@
-import * as React from "react";
+import React, { lazy } from "react";
 
 import Box from "../components/Box/Box";
 import EmptyBox from "../components/EmptyBox/EmptyBox";
 
-import Home from "./Home/Home";
-import AboutUs from "./AboutUs/AboutUs";
-import Gallery from "./Gallery/Gallery";
-import ContactUs from "./ContactUs/ContactUs";
-
-import views from "../data/views.json";
 import { VIEWS } from "../constants/views.constants";
 import { View } from "../types/Views/views.types";
 
-function RenderViewContainer({ view }: { view: View }): JSX.Element {
+export function RenderViewContainer({ view }: { view: View }): JSX.Element {
   const { value, isEmpty } = view;
   const BoxContainer = isEmpty ? EmptyBox : Box;
 
@@ -23,33 +17,19 @@ function RenderViewContainer({ view }: { view: View }): JSX.Element {
   );
 }
 
+const DefaultComponent = () => <h1>Example Text</h1>;
+
+
+const viewsComponents = {
+  [VIEWS.home]: lazy(() => import("../views/Home/Home")),
+  [VIEWS.aboutUs]: lazy(() => import("../views/AboutUs/AboutUs")),
+  [VIEWS.gallery]: lazy(() => import("../views/Gallery/Gallery")),
+  [VIEWS.ContactUs]: lazy(() => import("../views/ContactUs/ContactUs")),
+};
+
 function RenderView({ view }: { view: View }) {
   const { value, data } = view;
+  const Component = viewsComponents[value] ?? DefaultComponent;
 
-  switch (value) {
-    case VIEWS.home: {
-      return <Home view={data} />;
-    }
-    case VIEWS.aboutUs: {
-      return <AboutUs view={data} />;
-    }
-    case VIEWS.gallery: {
-      return <Gallery view={data} />;
-    }
-    case VIEWS.ContactUs: {
-      return <ContactUs view={data} />;
-    }
-    default:
-      return <h1>Example Text</h1>;
-  }
+  return <Component view={data} />;
 }
-
-const Views = () => (
-  <>
-    {views.map((view) => (
-      <RenderViewContainer view={view} />
-    ))}
-  </>
-);
-
-export default Views;

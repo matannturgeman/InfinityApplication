@@ -1,12 +1,12 @@
 import * as React from "react";
 import MainLayout from "./components/MainLayout/MainLayout";
-import Views from "./views/Views"
+import Router from "./router/Router";
 
 function App() {
   return (
     <div className="app">
       <MainLayout>
-        <Views />
+        <Router />
       </MainLayout>
     </div>
   );
