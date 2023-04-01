@@ -413,7 +413,6 @@
             { "url": "gallery/constructions/20201214_140844 - Copy.jpg" },
             { "url": "gallery/constructions/20201214_140844.jpg" },
             { "url": "gallery/constructions/20201214_140858.jpg" },
-            { "url": "gallery/constructions/20201214_140931.mp4" },
             { "url": "gallery/constructions/asdaDF.jpg" },
             { "url": "gallery/constructions/ASDFADFAD.jpg" },
             { "url": "gallery/constructions/DGHJDJDG.jpg" },
@@ -458,12 +457,6 @@
               "url": "gallery/constructions/WhatsApp Image 2022-08-03 at 06.24.51.jpeg"
             }
           ]
-        },
-        {
-          "id": 4,
-          "name": "grates",
-          "label": "סורגים",
-          "images": []
         }
       ]
     },
