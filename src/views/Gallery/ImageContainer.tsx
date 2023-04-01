@@ -3,8 +3,7 @@ import { ImageContainerProps } from "../../types/Views/gallery.types";
 import ImageListItem from "@mui/material/ImageListItem";
 import { styles } from "./Gallery.styles";
 import { styles as viewsStyles } from "../Views.styles";
-
-const imageCache: { [key: string]: string } = {};
+import { imageCache } from "../../data/gallery.cache";
 
 const ImageContainer: React.FC<ImageContainerProps> = ({
   item,
