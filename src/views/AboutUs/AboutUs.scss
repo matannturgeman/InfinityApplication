@@ -9,8 +9,17 @@
   direction: rtl;
   overflow-y: auto;
   font-size: inherit;
+  ::-webkit-scrollbar {
+    visibility: hidden;
+    width: 0;
+  }
+
+  form {
+    margin-right: 50px;
+  }
 
   .about-us-elements-container-container {
+    margin-right: 50px;
     @media (max-width: 768px) {
       flex-direction: column;
     }

@@ -27,8 +27,17 @@ export const styles = {
     [`@media (max-width:${MOBILE_WIDTH_BRAKEPOINT}px)`]: {
       height: "100%",
     },
+    "&::-webkit-scrollbar": {
+      visibility: "hidden",
+      width: 0,
+    },
   },
-  groupContainer: {},
+  groupContainer: {
+    "&::-webkit-scrollbar": {
+      visibility: "hidden",
+      width: 0,
+    },
+  },
   tabPanelBox: {
     display: "grid",
     gridTemplateRows: "100%",
@@ -39,6 +48,10 @@ export const styles = {
       overflowY: "auto",
       gridTemplateColumns: "1fr",
       gridTemplateRows: "repeat(3, 1000px)",
+    },
+    "&::-webkit-scrollbar": {
+      visibility: "hidden",
+      width: 0,
     },
   },
   tabPanel: {
@@ -56,4 +69,10 @@ export const styles = {
       overflowY: "none",
     },
   },
+  ImageGroup: {
+    "&::-webkit-scrollbar": {
+      visibility: "hidden",
+      width: 0,
+    },
+  }
 } as any;
