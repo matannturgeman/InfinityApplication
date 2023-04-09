@@ -1,8 +1,8 @@
 import React from "react";
-import { HomeProps, View } from "../../types/Views/home.types";
 import YouTube from "react-youtube";
-import "./Home.scss";
+import { HomeProps, View } from "../../types/Views/home.types";
 import ScrollBar from "../../components/MainLayout/ScrollBar/ScrollBar";
+import "./Home.scss";
 
 function Home({ view }: HomeProps) {
   const { text, videoId }: View = view;
