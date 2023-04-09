@@ -1,5 +1,5 @@
 .about-us-page {
- background: rgb(4 4 4 / 22%);
+  background: rgb(4 4 4 / 22%);
   width: 80%;
   height: 80%;
   padding: 20px;
@@ -8,6 +8,7 @@
   gap: 20px;
   direction: rtl;
   overflow-y: auto;
+  font-size: inherit;
 
   .about-us-elements-container-container {
     @media (max-width: 768px) {
@@ -23,6 +24,7 @@
 
   .about-us-text {
     width: 94%;
+    font-size: inherit;
   }
 
   .map-container {
@@ -44,15 +46,22 @@
     justify-content: space-between;
     height: 358px;
     margin-top: 30px;
+    font-size: inherit;
     @media (max-width: 768px) {
       height: 90px;
     }
 
     .about-us-datails {
+      font-size: inherit;
+      > * {
+        font-size: inherit;
+      }
       .phone-content {
+        font-size: inherit;
         display: flex;
         width: 100%;
         gap: 10px;
+
 
         > p {
           margin: 0;

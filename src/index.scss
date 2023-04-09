@@ -9,9 +9,17 @@ body {
   height: 100vh;
   padding: 0;
   display: flex;
-  font-size: 12px;
+  font-size: 17px;
   h1 {
+    text-decoration: bold;
+  }
+
+  @media (max-width: 768px) {
     font-size: 12px;
+  }
+  
+  @media (min-width: 1200px) {
+    font-size: 17px;
   }
 }
 html {
