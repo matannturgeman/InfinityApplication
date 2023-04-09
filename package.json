@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start-dev": "react-dotenv && react-scripts start",
-    "build": "react-dotenv && react-scripts build",
+    "build": "react-dotenv && react-scripts build && npm run zip-build",
+    "zip-build": "7z a -tzip build.zip build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start": "node server.js",
