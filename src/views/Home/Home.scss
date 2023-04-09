@@ -8,6 +8,10 @@
   gap: 20px;
   direction: rtl;
   overflow-y: auto;
+  ::-webkit-scrollbar {
+    visibility: hidden;
+    width: 0;
+  }
 
   .home-elements-container-container {
     justify-content: center;
@@ -16,7 +20,7 @@
     gap: 20px;
 
     > div {
-      width: 100%;
+      width: 89%;
       &.home-text-container {
         white-space: pre-wrap;
       }

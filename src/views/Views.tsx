@@ -19,7 +19,7 @@ export function RenderViewContainer({ view }: { view: View }): JSX.Element {
 
   return (
     <BoxContainer key={value} id={`page-${value}`}>
-      <RenderView view={view} />
+        <RenderView view={view} />
     </BoxContainer>
   );
 }
@@ -32,4 +32,3 @@ const viewsComponents = {
   [VIEWS.gallery]: lazy(() => import("../views/Gallery/Gallery")),
   [VIEWS.ContactUs]: lazy(() => import("../views/ContactUs/ContactUs")),
 };
-
