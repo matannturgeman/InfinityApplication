@@ -9,9 +9,21 @@ import NavBar from "../components/MainLayout/NavBar/NavBar";
 import views from "../data/views.json";
 import { View } from "../types/Views/views.types";
 import { RenderViewContainer } from "../views/Views";
+import { VIEWS } from "../constants/views.constants";
 
 const RouteLoader = () => {
-  const { routeValue = "home" } = useParams();
+  const { routeValue = VIEWS.home } = useParams();
+
+  if (routeValue === VIEWS.home) {
+    return (
+      <>
+        {views.map((view) => (
+          <RenderViewContainer view={view} />
+        ))}
+      </>
+    );
+  }
+  
   const view = views.find((v) => v.value === routeValue) as View;
   return <RenderViewContainer view={view} />;
 };
