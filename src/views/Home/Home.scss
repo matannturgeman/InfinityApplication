@@ -12,14 +12,27 @@
   .home-elements-container-container {
     justify-content: center;
     align-items: center;
-    height: 100%;
+    flex-direction: column;
+    gap: 20px;
 
-    >div {
+    > div {
       width: 100%;
+      &.home-text-container {
+        font-size: 20px;
+        white-space: pre-wrap;
+      }
+      &:not(.home-text-container) {
+        width: 700px;
+        display: flex;
+        align-items: flex-end;
 
-      >iframe {
-        width: 100%;
+        @media (max-width: 768px) {
+          width: 100%;
+        }
 
+        > iframe {
+          width: 100%;
+        }
       }
     }
   }

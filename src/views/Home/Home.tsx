@@ -12,6 +12,7 @@ function Home({ view }: HomeProps) {
   return (
     <section className="home-page">
       <div className="flex home-elements-container-container">
+        <div className="home-text-container">{text}</div>
         <YouTube videoId={videoId} />
       </div>
 
