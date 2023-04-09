@@ -17,7 +17,7 @@ body {
   @media (max-width: 768px) {
     font-size: 12px;
   }
-  
+
   @media (min-width: 1200px) {
     font-size: 17px;
   }
@@ -68,4 +68,8 @@ h1 {
 
 .router-link {
   text-decoration: none;
+}
+
+a:hover {
+  color: #000000;
 }

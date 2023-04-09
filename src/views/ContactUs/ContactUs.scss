@@ -3,7 +3,7 @@
   align-items: center;
 }
 .contact-us-page {
- background: rgb(4 4 4 / 22%);
+  background: rgb(4 4 4 / 22%);
   width: 80%;
   height: 80%;
   padding: 20px;
@@ -14,7 +14,13 @@
   overflow-y: auto;
   margin: 0 auto;
 
+  ::-webkit-scrollbar {
+    visibility: "hidden";
+    width: 0;
+  }
+
   .contact-us-elements-container-container {
+    margin-right: 50px;
     @media (max-width: 768px) {
       flex-direction: column;
     }
@@ -24,6 +30,10 @@
         width: 100%;
       }
     }
+  }
+
+  .form-container {
+    margin-right: 50px;
   }
 
   .contact-us-text {

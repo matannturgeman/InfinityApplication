@@ -17,22 +17,22 @@ const ImagesContainer = ({
     ...(isMobile || !isTitleDisplayed ? { width: "100%" } : {}),
   };
   return (
-    <ImageList
-      sx={imageListStyle}
-      cols={!isTitleDisplayed && !isMobile ? 5 : 3}
-      rowHeight={300}
-    >
-      {data.map(
-        (item: Image): JSX.Element => (
-          <ImageContainer
-            item={item}
-            onImageClick={onImageClick}
-            isPointer={isPointer}
-            key={`${item.group} - ${item.url}`}
-          />
-        )
-      )}
-    </ImageList>
+      <ImageList
+        sx={imageListStyle}
+        cols={!isTitleDisplayed && !isMobile ? 5 : 3}
+        rowHeight={300}
+      >
+          {data.map(
+            (item: Image): JSX.Element => (
+              <ImageContainer
+                item={item}
+                onImageClick={onImageClick}
+                isPointer={isPointer}
+                key={`${item.group} - ${item.url}`}
+              />
+            )
+          )}
+      </ImageList>
   );
 };
 
