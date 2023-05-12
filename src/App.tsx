@@ -2,13 +2,22 @@ import * as React from "react";
 import MainLayout from "./components/MainLayout/MainLayout";
 import Router from "./router/Router";
 
+import {
+  QueryClient,
+  QueryClientProvider,
+} from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
+
 function App() {
   return (
-    <div className="app">
-      <MainLayout>
-        <Router />
-      </MainLayout>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div className="app">
+        <MainLayout>
+          <Router />
+        </MainLayout>
+      </div>
+    </QueryClientProvider>
   );
 }
 
